@@ -79,6 +79,7 @@ main(int argc, char **argv) {
     std::vector<int> readyQueueTracker;  // the logs to be replayed, 1 log == 1000 transactions
 
 
+    //Get the arguments
 
 
     while (1) {

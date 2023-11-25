@@ -5,6 +5,7 @@ leadrIP=$( cat ./scripts/ip_leader_replica )
 p1=$( cat ./scripts/ip_p1_follower_replica )
 p2=$( cat ./scripts/ip_p2_follower_replica )
 ulimit -n 10000
+
 # minimum of the number of worker threads
 start=1
 # maximum of the number of worker threads
@@ -18,13 +19,15 @@ setup () {
 
 experiment1 () {
    echo 'start experiment-1'
+   #Kill existing dbtest and recompile
    sudo ./multi-silo-only.sh $start $end
    python3 scripts/extractor.py 0 silo-only-logs "agg_throughput:" "ops/sec" > results/silo-only-tpcc.log
 }
 
 experiment2 () {
     echo 'start experiment-2'
-    sudo bash ./multi.sh
+    #Kill existing dbtest and recompile
+    #sudo bash ./multi.sh
     bash ./batch_silo.sh kill
     bash ./batch_silo.sh scp
 
@@ -57,14 +60,20 @@ experiment2 () {
 
 experiment3 () {
   echo 'start experiment-3'
+  
+  #Kill existing dbtest and recompile
   sudo ./multi-silo-only-m.sh $start $end
+
   python3 scripts/extractor.py 0 silo-only-logs-m "agg_throughput:" "ops/sec" > results/silo-only-ycsb.log
 }
 
 
 experiment4 () {
     echo 'start experiment-4'
-    sudo bash ./multi.sh
+
+    #Kill existing dbtest and recompile
+    #sudo bash ./multi.sh
+    
     bash ./batch_silo.sh kill
     bash ./batch_silo.sh scp
 
@@ -101,11 +110,15 @@ experiment5() {
 
 experiment6() {
   echo 'start experiment-6'
-  sudo  bash ./multi-failover.sh
+  
+  #Kill existing dbtest and recompile
+  #sudo  bash ./multi-failover.sh
+  
   bash ./batch_silo.sh kill
   bash ./batch_silo.sh scp
 
-  sudo  bash ./multi-failover-variable.sh
+  #Kill existing dbtest, compile with failover configuration 1
+  #sudo  bash ./multi-failover-variable.sh
   
   eval "ulimit -n 10000; cd $workdir/$repos/ && sudo ./b0.sh 16" &
   sleep 1
@@ -142,7 +155,10 @@ experiment6() {
 
 experiment7 () {
   echo "start experiment7"
-  sudo  bash ./multi-latency.sh
+  
+  #Kill existing dbtest and recompile
+  #sudo  bash ./multi-latency.sh
+  
   bash ./batch_silo.sh scp
   bash ./batch_silo.sh kill
   bash ./batch_size_exp.sh
@@ -151,7 +167,10 @@ experiment7 () {
 
 experiment8 () {
   echo "start experiment8"
-  sudo  bash ./multi.sh
+
+  #Kill existing dbtest and recompile
+  #sudo  bash ./multi.sh
+  
   bash ./batch_silo.sh scp
   bash ./batch_silo.sh kill
   bash ./batch_size_exp.sh
