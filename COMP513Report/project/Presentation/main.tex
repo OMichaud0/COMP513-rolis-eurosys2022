@@ -85,14 +85,14 @@
                 \item 32vCPUs (Intel Xeon Platinum 8272CL) 
                 \item 128GB RAM 
                 \item 16,000Mbps Network
-                \item Ubuntu 18.04 
-                \item Hypervisor
-                \item Single Socket (?)
+                \item Ubuntu 18.04 LTS
+                \item Hypervisor: Hyper-V based
+                \item Single Socket (assumption)
                 \item 32vCPUs (Intel Xeon Platinum 8259CL) 
                 \item 128GB RAM
                 \item 10,000Mbps Network 
-                \item Ubuntu 18.04 
-                \item Hypervisor
+                \item Ubuntu Server 20.04 LTS
+                \item Hypervisor: KVM based
                 \item Shared Instance
             \end{itemize}      
         \end{multicols}
@@ -106,6 +106,7 @@
             \item Security Groups 
             \item Start EC2 instances.
             \item Setup SSH connections. 
+            \item Run $\text{install}.\text{sh}$.
             \item Setup IP addresses (guide given by the paper).
             \item Run $\text{one-click}.\text{sh}$.
         \end{itemize}
