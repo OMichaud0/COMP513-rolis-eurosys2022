@@ -10,10 +10,13 @@
 \usepackage{subcaption}
 \usepackage{multicol}
 
-\title{COMP 513}
-\subtitle{Sushmit Sarkar, Peter Sewell, Jade Alglave, Luc Maranget, Derek Williams}
+\setbeamertemplate{footline}[frame number]
 
-\author{Presented by \\ Akshay Gopalakrishnan}
+\title{COMP 513 Project}
+\subtitle{\textbf{Rolis}}
+\date{December 5th 2023}
+
+\author{Presented by \\ Olivier Michaud, Akshay Gopalakrishnan \\ McGill University}
 
 
 \begin{document}
@@ -41,10 +44,11 @@
             Rolis: A software approach to efficiently replicating multi-core transactions 
         \end{center}
 
+
         \begin{itemize}
             \item Proposes a new consensus algorithm to improve throughput. 
-            \item Idea is to use multiple threads per leader/follower to process transactions. 
-            \item The proposed algorithm also performs well upon failure recovery using watermarks to ensure synchronization when necessary.
+            \item Uses multiple threads per leader/follower to process transactions. 
+            \item Performs well upon failure recovery using \textit{watermarks} to ensure synchronization when necessary.
         \end{itemize}
 
     \end{frame}
@@ -55,11 +59,14 @@
             \item Throughput
             \begin{itemize}
                 \item vs Silo - Algorithm is built by modifying Silo.  
-                \item vs Calvin - Existing state of the art. 
+                \item vs Calvin - Existing state-of-the-art. 
             \end{itemize}    
-            \item Latency - On different batch sizes.           
+            \item Latency
+            \begin{itemize}
+                \item On different batch sizes.  
+                \item Measured for $10^{th}, 50^{th}, 95^{th}$ percentiles.
+            \end{itemize}         
         \end{itemize}
-
         
     \end{frame}
 
@@ -67,129 +74,195 @@
 
     \section{Setup}
 
-    \begin{frame}{System Configuration}
+    
+    \begin{frame}{Chosen Test Environment}
 
-        Choice of system
+        AWS EC2 shared instances. 
 
+        Differs from original system
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item 32vCPUs (Intel Xeon Platinum 8272CL) 
+                \item 128GB RAM 
+                \item 16,000Mbps Network
+                \item Ubuntu 18.04 
+                \item Hypervisor
+                \item Single Socket (?)
+                \item 32vCPUs (Intel Xeon Platinum 8259CL) 
+                \item 128GB RAM
+                \item 10,000Mbps Network 
+                \item Ubuntu 18.04 
+                \item Hypervisor
+                \item Shared Instance
+            \end{itemize}      
+        \end{multicols}
     \end{frame}
+
 
     \begin{frame}{How we ran it}
 
         \begin{itemize}
-            \item Security Groups
-            \item .... 
+            \item Virtual Private Cloud 
+            \item Security Groups 
             \item Start EC2 instances.
-            \item Setup IP addresses via (link to environment setup) guide given by the paper.
-            \item ... 
+            \item Setup SSH connections. 
+            \item Setup IP addresses (guide given by the paper).
             \item Run $\text{one-click}.\text{sh}$.
         \end{itemize}
 
     \end{frame}
 
-    \begin{frame}{Differences}
+   
+    \section{Experiments}
 
-        Differs from original system
-        \begin{multicols}{2}
-            \begin{itemize}
-                \item CPU 
-                \item RAM 
-                \item NETWORK
-                \item OS 
-                \item CPU 
-                \item RAM
-                \item NETWORK
-                \item OS 
-            \end{itemize}      
-        \end{multicols}
+    \begin{frame}{Throughput Rolis vs Silo: YCSB++}
+        
+        \begin{figure}
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.65]{rolis_fig10_ycsb.png}
+                \caption{Original}
+            \end{subfigure}%
+            \hfill
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.30]{fig10_ycsb.png}
+                \caption{Observed}
+            \end{subfigure}
+        \end{figure}
 
     \end{frame}
 
-    \section{Experiments}
+    \begin{frame}{Throughput: Rolis vs Silo: TPCC}   
+        \begin{figure}
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.65]{rolis_fig10_tpcc.png}
+                \caption{Original}
+            \end{subfigure}%
+            \hfill
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.30]{fig10_tpcc.png}
+                \caption{Observed}
+            \end{subfigure}
+        \end{figure}
+    \end{frame}
 
+    \begin{frame}{Discuss Observation}
 
-    \begin{frame}{Choice}
+        \begin{figure}
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.30]{fig10_ycsb.png}
+                \caption{YCSB++}
+            \end{subfigure}%
+            \hfill
+            \begin{subfigure}[h]{0.5\textwidth}
+                \includegraphics[scale=0.30]{fig10_tpcc.png}
+                \caption{TPC-C}
+            \end{subfigure}
+        \end{figure}
 
         \begin{itemize}
-            \item Reasons
+            \item VM Resource Overcommitment vs Bare Metal Instance 
+            \item CPU sockets
         \end{itemize}
 
     \end{frame}
 
-    \begin{frame}{Throughput Rolis vs Silo}
-        
+
+    \begin{frame}{Throughput: Rolis vs Calvin}
         \begin{figure}
-            \begin{subfigure}[h]{0.4\textwidth}
-                \includegraphics[scale=0.35]{RolisBatch1.pdf}
-                \caption{Image A}
+            \begin{subfigure}[h]{0.5\linewidth}
+                \includegraphics[scale=0.40]{rolis_fig12.png}
+                \caption{Original}
+            \end{subfigure}%
+            \hfill
+            \begin{subfigure}[h]{0.5\linewidth}
+                \includegraphics[scale=0.30]{fig12.png}
+                \caption{Observed}
+            \end{subfigure}           
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Discuss}
+
+        \begin{figure}
+            \includegraphics[scale=0.4]{fig12.png}
+            \caption{Observed Throughput of Rolis vs Calvin}
+        \end{figure}
+
+        \begin{itemize}
+            \item Calvin's thread-implementation vs Rolis.
+            \item CPU Sockets (Calvin experiment needs just one Machine).
+        \end{itemize}
+
+
+    \end{frame}
+
+
+    \begin{frame}{Latency: Batch-Size Take 1}
+        \begin{figure}
+            \begin{subfigure}[h]{0.4\linewidth}
+                \includegraphics[scale=0.50]{rolis_fig16.png}
+                \caption{Original (16 threads)}
             \end{subfigure}
             \hfill
-                \begin{subfigure}[h]{0.4\textwidth}
-                \includegraphics[scale=0.35]{RolisBatch1.pdf}
-                \caption{Image B}
-            \end{subfigure}%
-            \caption{This is a figure with two subfigures}
+            \begin{subfigure}[h]{0.5\linewidth}
+                \includegraphics[scale=0.30]{fig16_16t.png}
+                \caption{Observed (16 threads)}
+            \end{subfigure}
         \end{figure}
-
     \end{frame}
 
-    \begin{frame}{Discuss}
-        TBD
-    \end{frame}
-
-
-    \begin{frame}{Throughput  Rolis vs Calvin}
+    \begin{frame}{Latency: Batch-size Take 2}
         \begin{figure}
             \begin{subfigure}[h]{0.4\linewidth}
-                \includegraphics[width=\linewidth]{sample.pdf}
-                \caption{Image A}
+                \includegraphics[scale=0.50]{rolis_fig16.png}
+                \caption{Original (16 threads)}
             \end{subfigure}
-                \hfill
-                \begin{subfigure}[h]{0.4\linewidth}
-                \includegraphics[width=\linewidth]{sample.pdf}
-                \caption{Image B}
-            \end{subfigure}%
-            \caption{This is a figure with two subfigures}
+            \hfill
+            \begin{subfigure}[h]{0.5\linewidth}
+                \includegraphics[scale=0.30]{fig16_12t.png}
+                \caption{Observed (12 threads)}
+            \end{subfigure}
         \end{figure}
-
     \end{frame}
 
+    
     \begin{frame}{Discuss}
-        TBD
-    \end{frame}
-
-
-    \begin{frame}{Batch}
-
+    
         \begin{figure}
             \begin{subfigure}[h]{0.4\linewidth}
-                \includegraphics[width=\linewidth]{sample.pdf}
-                \caption{Image A}
+                \includegraphics[scale=0.28]{fig16_16t.png}
+                \caption{Original (16 threads)}
             \end{subfigure}
-                \hfill
-                \begin{subfigure}[h]{0.4\linewidth}
-                \includegraphics[width=\linewidth]{sample.pdf}
-                \caption{Image B}
-            \end{subfigure}%
-            \caption{This is a figure with two subfigures}
+            \hfill
+            \begin{subfigure}[h]{0.5\linewidth}
+                \includegraphics[scale=0.28]{fig16_12t.png}
+                \caption{Observed (12 threads)}
+            \end{subfigure}
         \end{figure}
 
-    \end{frame}
+        \begin{itemize}
+            \item Shared Instances - Network Bandwith
+            \item Congestion control.
+        \end{itemize}
 
-    \begin{frame}{Discuss}
-        TBD
     \end{frame}
 
 
     \section{Conclusion}
 
-    \begin{frame}{Thoughts}
+    \begin{frame}{Thank you}
 
+        \begin{itemize}
+            \item dkglkhfg
+            \item kfghkfg
+        \end{itemize}
+
+        Questions? 
 
     \end{frame}
 
-    \begin{frame} 
-
+    \begin{frame}
+        
     \end{frame}
-
 
 \end{document}
