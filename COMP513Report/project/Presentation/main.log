@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.26)  30 NOV 2023 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.26)  3 DEC 2023 11:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,11 +249,7 @@ File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)))
-
-Class beamer Warning: This option is obsolete. Use beamer option ``show notes'' instead. on input line 357.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+))) (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
@@ -787,184 +783,180 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./main.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./main.toc) [2
-
-] [3
+] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 71.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-) [4
+) [3
+
+] [4
 
 ] [5
 
-] [6
-
 ]
-<rolis_fig10_ycsb.png, id=225, 199.947pt x 121.6545pt>
+<rolis_fig10_ycsb.png, id=190, 199.947pt x 121.6545pt>
 File: rolis_fig10_ycsb.png Graphic file (type png)
 <use rolis_fig10_ycsb.png>
-Package pdftex.def Info: rolis_fig10_ycsb.png  used on input line 132.
+Package pdftex.def Info: rolis_fig10_ycsb.png  used on input line 125.
 (pdftex.def)             Requested size: 129.964pt x 79.07448pt.
-<fig10_ycsb.png, id=227, 526.96875pt x 325.215pt>
+<fig10_ycsb.png, id=192, 526.96875pt x 325.215pt>
 File: fig10_ycsb.png Graphic file (type png)
 <use fig10_ycsb.png>
-Package pdftex.def Info: fig10_ycsb.png  used on input line 132.
+Package pdftex.def Info: fig10_ycsb.png  used on input line 125.
 (pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 132--132
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 125--125
+[][] 
+ []
+
+[6
+
+ <./rolis_fig10_ycsb.png> <./fig10_ycsb.png>]
+<rolis_fig10_tpcc.png, id=227, 217.41225pt x 128.27925pt>
+File: rolis_fig10_tpcc.png Graphic file (type png)
+<use rolis_fig10_tpcc.png>
+Package pdftex.def Info: rolis_fig10_tpcc.png  used on input line 139.
+(pdftex.def)             Requested size: 141.31627pt x 83.38051pt.
+<fig10_tpcc.png, id=228, 526.96875pt x 325.215pt>
+File: fig10_tpcc.png Graphic file (type png)
+<use fig10_tpcc.png>
+Package pdftex.def Info: fig10_tpcc.png  used on input line 139.
+(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
+
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 139--139
 [][] 
  []
 
 [7
 
- <./rolis_fig10_ycsb.png> <./fig10_ycsb.png>]
-<rolis_fig10_tpcc.png, id=264, 217.41225pt x 128.27925pt>
-File: rolis_fig10_tpcc.png Graphic file (type png)
-<use rolis_fig10_tpcc.png>
-Package pdftex.def Info: rolis_fig10_tpcc.png  used on input line 146.
-(pdftex.def)             Requested size: 141.31627pt x 83.38051pt.
-<fig10_tpcc.png, id=265, 526.96875pt x 325.215pt>
-File: fig10_tpcc.png Graphic file (type png)
-<use fig10_tpcc.png>
-Package pdftex.def Info: fig10_tpcc.png  used on input line 146.
+ <./rolis_fig10_tpcc.png> <./fig10_tpcc.png>]
+File: fig10_ycsb.png Graphic file (type png)
+<use fig10_ycsb.png>
+Package pdftex.def Info: fig10_ycsb.png  used on input line 160.
 (pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 146--146
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 160--160
+[][] 
+ []
+
+File: fig10_tpcc.png Graphic file (type png)
+<use fig10_tpcc.png>
+Package pdftex.def Info: fig10_tpcc.png  used on input line 160.
+(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
+
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 160--160
 [][] 
  []
 
 [8
 
- <./rolis_fig10_tpcc.png> <./fig10_tpcc.png>]
-File: fig10_ycsb.png Graphic file (type png)
-<use fig10_ycsb.png>
-Package pdftex.def Info: fig10_ycsb.png  used on input line 167.
-(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
+]
+<rolis_fig12.png, id=293, 374.5995pt x 228.855pt>
+File: rolis_fig12.png Graphic file (type png)
+<use rolis_fig12.png>
+Package pdftex.def Info: rolis_fig12.png  used on input line 174.
+(pdftex.def)             Requested size: 149.83714pt x 91.54037pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 167--167
+Overfull \hbox (4.46584pt too wide) in paragraph at lines 174--174
 [][] 
  []
 
-File: fig10_tpcc.png Graphic file (type png)
-<use fig10_tpcc.png>
-Package pdftex.def Info: fig10_tpcc.png  used on input line 167.
+<fig12.png, id=294, 526.96875pt x 325.215pt>
+File: fig12.png Graphic file (type png)
+<use fig12.png>
+Package pdftex.def Info: fig12.png  used on input line 174.
 (pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 167--167
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 174--174
 [][] 
  []
 
 [9
 
-]
-<rolis_fig12.png, id=328, 374.5995pt x 228.855pt>
-File: rolis_fig12.png Graphic file (type png)
-<use rolis_fig12.png>
-Package pdftex.def Info: rolis_fig12.png  used on input line 182.
-(pdftex.def)             Requested size: 149.83714pt x 91.54037pt.
-
-Overfull \hbox (4.46584pt too wide) in paragraph at lines 182--182
-[][] 
- []
-
-<fig12.png, id=329, 526.96875pt x 325.215pt>
-File: fig12.png Graphic file (type png)
-<use fig12.png>
-Package pdftex.def Info: fig12.png  used on input line 182.
-(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
-
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 182--182
-[][] 
- []
-
-[10
-
  <./rolis_fig12.png> <./fig12.png>]
 File: fig12.png Graphic file (type png)
 <use fig12.png>
-Package pdftex.def Info: fig12.png  used on input line 197.
+Package pdftex.def Info: fig12.png  used on input line 189.
 (pdftex.def)             Requested size: 210.78375pt x 130.0837pt.
- [11
+ [10
 
 ]
-<rolis_fig16.png, id=393, 283.65974pt x 166.82326pt>
+<rolis_fig16.png, id=358, 283.65974pt x 166.82326pt>
 File: rolis_fig16.png Graphic file (type png)
 <use rolis_fig16.png>
-Package pdftex.def Info: rolis_fig16.png  used on input line 212.
+Package pdftex.def Info: rolis_fig16.png  used on input line 203.
 (pdftex.def)             Requested size: 141.82951pt x 83.41142pt.
 
-Overfull \hbox (25.53424pt too wide) in paragraph at lines 212--212
+Overfull \hbox (25.53424pt too wide) in paragraph at lines 203--203
 [][] 
  []
 
-<fig16_16t.png, id=394, 526.96875pt x 325.215pt>
+<fig16_16t.png, id=359, 526.96875pt x 325.215pt>
 File: fig16_16t.png Graphic file (type png)
 <use fig16_16t.png>
-Package pdftex.def Info: fig16_16t.png  used on input line 212.
+Package pdftex.def Info: fig16_16t.png  used on input line 203.
 (pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 212--212
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 203--203
+[][] 
+ []
+
+[11
+
+ <./rolis_fig16.png> <./fig16_16t.png>]
+File: rolis_fig16.png Graphic file (type png)
+<use rolis_fig16.png>
+Package pdftex.def Info: rolis_fig16.png  used on input line 217.
+(pdftex.def)             Requested size: 141.82951pt x 83.41142pt.
+
+Overfull \hbox (25.53424pt too wide) in paragraph at lines 217--217
+[][] 
+ []
+
+<fig16_12t.png, id=392, 526.96875pt x 325.215pt>
+File: fig16_12t.png Graphic file (type png)
+<use fig16_12t.png>
+Package pdftex.def Info: fig16_12t.png  used on input line 217.
+(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
+
+Overfull \hbox (12.72054pt too wide) in paragraph at lines 217--217
 [][] 
  []
 
 [12
 
- <./rolis_fig16.png> <./fig16_16t.png>]
-File: rolis_fig16.png Graphic file (type png)
-<use rolis_fig16.png>
-Package pdftex.def Info: rolis_fig16.png  used on input line 226.
-(pdftex.def)             Requested size: 141.82951pt x 83.41142pt.
+ <./fig16_12t.png>]
+File: fig16_16t.png Graphic file (type png)
+<use fig16_16t.png>
+Package pdftex.def Info: fig16_16t.png  used on input line 239.
+(pdftex.def)             Requested size: 147.55023pt x 91.05957pt.
 
-Overfull \hbox (25.53424pt too wide) in paragraph at lines 226--226
+Overfull \hbox (31.25496pt too wide) in paragraph at lines 239--239
 [][] 
  []
 
-<fig16_12t.png, id=427, 526.96875pt x 325.215pt>
 File: fig16_12t.png Graphic file (type png)
 <use fig16_12t.png>
-Package pdftex.def Info: fig16_12t.png  used on input line 226.
-(pdftex.def)             Requested size: 158.09184pt x 97.56525pt.
+Package pdftex.def Info: fig16_12t.png  used on input line 239.
+(pdftex.def)             Requested size: 147.55023pt x 91.05957pt.
 
-Overfull \hbox (12.72054pt too wide) in paragraph at lines 226--226
+Overfull \hbox (2.17892pt too wide) in paragraph at lines 239--239
 [][] 
  []
 
 [13
 
- <./fig16_12t.png>]
-File: fig16_16t.png Graphic file (type png)
-<use fig16_16t.png>
-Package pdftex.def Info: fig16_16t.png  used on input line 248.
-(pdftex.def)             Requested size: 147.55023pt x 91.05957pt.
-
-Overfull \hbox (31.25496pt too wide) in paragraph at lines 248--248
-[][] 
- []
-
-File: fig16_12t.png Graphic file (type png)
-<use fig16_12t.png>
-Package pdftex.def Info: fig16_12t.png  used on input line 248.
-(pdftex.def)             Requested size: 147.55023pt x 91.05957pt.
-
-Overfull \hbox (2.17892pt too wide) in paragraph at lines 248--248
-[][] 
- []
-
-[14
-
-] [15
-
-] [16
+] [14
 
 ]
 \tf@nav=\write6
@@ -981,18 +973,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F5F948C13FD36B13289A495DA182ED46;362.
  ) 
 Here is how much of TeX's memory you used:
- 23414 strings out of 478287
- 459447 string characters out of 5849289
- 710042 words of memory out of 5000000
- 41088 multiletter control sequences out of 15000+600000
+ 23379 strings out of 478287
+ 458618 string characters out of 5849289
+ 710966 words of memory out of 5000000
+ 41059 multiletter control sequences out of 15000+600000
  480759 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,464b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on main.pdf (16 pages, 275016 bytes).
+Output written on main.pdf (14 pages, 271504 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 33 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

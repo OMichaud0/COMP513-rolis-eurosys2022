@@ -1,4 +1,4 @@
-\documentclass[notes, xcolor=dvipsnames]{beamer}
+\documentclass[xcolor=dvipsnames]{beamer}
 
 \usetheme{Berkeley}
 
@@ -26,14 +26,6 @@
         \maketitle
 
     \end{frame}
-
-
-    \begin{frame}{Overview}
-
-        \tableofcontents
-        
-    \end{frame}
-
 
     \section{Introduction}
 
@@ -77,29 +69,29 @@
     
     \begin{frame}{Chosen Test Environment}
 
-        AWS EC2 shared instances. 
-
-        Differs from original system
+        Comparison (right) with original system (left)
         \begin{multicols}{2}
             \begin{itemize}
+                \item Azure
                 \item 32vCPUs (Intel Xeon Platinum 8272CL) 
                 \item 128GB RAM 
                 \item 16,000Mbps Network
                 \item Ubuntu 18.04 LTS
-                \item Hypervisor: Hyper-V based
-                \item Single Socket (assumption)
+                \item Hypervisor: Hyper-V
+                \item Single Socket (assumed)
+                \item AWS EC2
                 \item 32vCPUs (Intel Xeon Platinum 8259CL) 
                 \item 128GB RAM
                 \item 10,000Mbps Network 
                 \item Ubuntu Server 20.04 LTS
-                \item Hypervisor: KVM based
+                \item Hypervisor: KVM
                 \item Shared Instance
             \end{itemize}      
         \end{multicols}
     \end{frame}
 
 
-    \begin{frame}{How we ran it}
+    \begin{frame}{Steps to Run}
 
         \begin{itemize}
             \item Virtual Private Cloud 
@@ -116,7 +108,7 @@
    
     \section{Experiments}
 
-    \begin{frame}{Throughput Rolis vs Silo: YCSB++}
+    \begin{frame}{Throughput: Rolis vs Silo (YCSB++)}
         
         \begin{figure}
             \begin{subfigure}[h]{0.5\textwidth}
@@ -132,7 +124,7 @@
 
     \end{frame}
 
-    \begin{frame}{Throughput: Rolis vs Silo: TPCC}   
+    \begin{frame}{Throughput: Rolis vs Silo (TPC-C)}   
         \begin{figure}
             \begin{subfigure}[h]{0.5\textwidth}
                 \includegraphics[scale=0.65]{rolis_fig10_tpcc.png}
@@ -161,14 +153,13 @@
         \end{figure}
 
         \begin{itemize}
-            \item VM Resource Overcommitment vs Bare Metal Instance 
-            \item CPU sockets
+            \item VM Resource Overcommitment vs Bare Metal Instance. 
+            \item CPU sockets.
         \end{itemize}
 
     \end{frame}
 
-
-    \begin{frame}{Throughput: Rolis vs Calvin}
+    \begin{frame}{Throughput: Rolis vs Calvin (YCSB++)}
         \begin{figure}
             \begin{subfigure}[h]{0.5\linewidth}
                 \includegraphics[scale=0.40]{rolis_fig12.png}
@@ -182,7 +173,7 @@
         \end{figure}
     \end{frame}
 
-    \begin{frame}{Discuss}
+    \begin{frame}{Discuss Observation}
 
         \begin{figure}
             \includegraphics[scale=0.4]{fig12.png}
@@ -196,7 +187,6 @@
 
 
     \end{frame}
-
 
     \begin{frame}{Latency: Batch-Size Take 1}
         \begin{figure}
@@ -226,8 +216,8 @@
         \end{figure}
     \end{frame}
 
-    
-    \begin{frame}{Discuss}
+
+    \begin{frame}{Discuss Observation}
     
         \begin{figure}
             \begin{subfigure}[h]{0.4\linewidth}
@@ -242,8 +232,8 @@
         \end{figure}
 
         \begin{itemize}
-            \item Shared Instances - Network Bandwith
-            \item Congestion control.
+            \item Shared Instances - Network Bandwidth.
+            \item Shared Instances - Congestion Control.
         \end{itemize}
 
     \end{frame}
@@ -254,16 +244,12 @@
     \begin{frame}{Thank you}
 
         \begin{itemize}
-            \item dkglkhfg
-            \item kfghkfg
+            \item Rolis: \href{https://dl.acm.org/doi/10.1145/3492321.3519561}{Paper}
+            \item Rolis: \href{https://github.com/stonysystems/rolis}{Experiments Repository}
         \end{itemize}
 
         Questions? 
 
-    \end{frame}
-
-    \begin{frame}
-        
     \end{frame}
 
 \end{document}
